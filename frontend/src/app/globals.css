@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white font-sans text-hof antialiased;
+}
+
+/* Hide scrollbar for category chips row (still scrollable). */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Airbnb-style range slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  background: #dddddd;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+
+/* Photo carousel / gallery image */
+img {
+  -webkit-user-drag: none;
+}
+
+/* Leaflet price pins (Airbnb-style chips) */
+.airbnb-price-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  padding: 6px 10px;
+  border-radius: 9999px;
+  background: #ffffff;
+  color: #222222;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease;
+  white-space: nowrap;
+}
+.airbnb-price-pin:hover {
+  transform: scale(1.08);
+  background: #222222;
+  color: #ffffff;
+}
+
+/* Leaflet popup polish */
+.leaflet-popup-content-wrapper {
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+.leaflet-popup-content {
+  margin: 12px;
+}
+
+/* Dark mode base */
+html.dark {
+  background-color: #101014;
+}
+.dark body {
+  background: #101014;
+  color: #f0f0f0;
+}
+

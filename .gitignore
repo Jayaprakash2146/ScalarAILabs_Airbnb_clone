@@ -1,0 +1,21 @@
+# Reference material (not part of the app)
+*.mp4
+
+# Python
+__pycache__/
+*.pyc
+backend/airbnb.db
+backend/uploads/
+
+# Node / Next.js
+node_modules/
+frontend/.next/
+frontend/out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Env & IDE
+.env
+.env*.local
+.vscode/
+.idea/
